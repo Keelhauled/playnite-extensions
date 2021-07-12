@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Text;
 using Playnite.SDK;
 using Playnite.SDK.Plugins;
 
-[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.0.0")]
 
 namespace PlaytimeEdit
 {
@@ -22,13 +19,14 @@ namespace PlaytimeEdit
 
         public override List<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs args)
         {
-            var menuItem = new GameMenuItem
+            return new List<GameMenuItem>
             {
-                Description = "Edit Playtime",
-                Action = InvokeGameMenuFunction
+                new GameMenuItem
+                {
+                    Description = "Edit Playtime",
+                    Action = InvokeGameMenuFunction
+                }
             };
-
-            return new List<GameMenuItem>{ menuItem };
         }
 
         private void InvokeGameMenuFunction(GameMenuItemActionArgs args)

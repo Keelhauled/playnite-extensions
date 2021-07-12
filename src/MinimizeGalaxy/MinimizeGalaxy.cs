@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Reflection;
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using Playnite.SDK.Plugins;
 
-[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.0.0")]
 
 namespace MinimizeGalaxy
 {
