@@ -1,0 +1,6 @@
+Id: keelhauled.minimizegalaxy
+Name: Minimize Galaxy
+Author: Keelhauled
+Version: 1.0.0
+Module: MinimizeGalaxy.dll
+Type: GenericPlugin
