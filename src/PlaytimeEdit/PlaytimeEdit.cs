@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
+using System.Text;
 using Playnite.SDK;
 using Playnite.SDK.Plugins;
 
@@ -34,7 +36,7 @@ namespace PlaytimeEdit
             foreach(var game in args.Games)
             {
                 var time = SecondsToTime(game.Playtime);
-                var input = PlayniteApi.Dialogs.SelectString($"Current playtime is {time}./n/nSet new playtime:", game.Name, time);
+                var input = PlayniteApi.Dialogs.SelectString($"Current playtime is {time}.{Environment.NewLine + Environment.NewLine}Set new playtime:", game.Name, time);
 
                 if(input.Result)
                 {
